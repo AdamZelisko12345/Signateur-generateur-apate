@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Signature interactive compacte</title>
+</head>
+
+<body style="font-family: 'Montserrat', Arial, sans-serif; height: 100%; margin: 0; padding: 0;">
+
+    <table cellpadding="0" cellspacing="0" style="width: 480px; height: 100%; border: 1px solid gray; font-family: 'Montserrat', Arial, sans-serif;">
+        <tr style="height: 100%;">
+            <!-- Colonne logo -->
+            <td style="width: 110px; border-right: 1px solid gray; text-align: center; padding: 4px; background-color: #ffffff;">
+                <table cellpadding="0" cellspacing="0" style="width: 100%; text-align: center;">
+                    <tr>
+                        <td style="padding: 0 6px; border-right: 1px solid gray;">
+                            <img src="https://cdn.glitch.global/5cdba2c7-3b9b-4262-84c2-103095427298/Code%2FLogo%2FLogoBleuAPATE.png?v=1744619893557" alt="Logo Apate" style="width: 75px;">
+                        </td>
+                        <td style="padding: 0 6px;">
+                            <img src="https://cdn.glitch.global/5cdba2c7-3b9b-4262-84c2-103095427298/Code%2FLogo%2FLechatperche.png?v=1744619894303" alt="Logo Le Chat Perché" style="width: 100px;">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+            <!-- Colonne image verticale décorative -->
+            <td style="width: 30px; height: 130px; padding: 0; background-color: #ffffff;">
+                <img src="https://cdn.glitch.global/5cdba2c7-3b9b-4262-84c2-103095427298/Code%2FLogo%2FForme.png?v=1744619894934" alt="Décor vertical" style="width: 100%; height: 150px; display: block;">
+            </td>
+
+            <!-- Colonne infos -->
+            <td style="padding: 10px; background-color: #ffffff; vertical-align: top;">
+                <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                    <tr>
+                        <td style="padding-top: 4px; font-size: 13px; font-weight: 600; color: #000;" id="nomPrenom">NOM Prénom</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 11px; font-weight: 300; color: #000;" id="statut">Statut</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr style="width: 40px; border: none; border-top: 1px solid gray; margin: 4px 0;">
+                        </td>
+                    </tr>
+                    <!-- Téléphone -->
+                    <tr>
+                        <td style="padding-top: 4px;">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td style="vertical-align: middle;">
+                                        <img src="https://cdn.glitch.global/5cdba2c7-3b9b-4262-84c2-103095427298/Code%2FLogo%2FIconTelephoneNoir.png?v=1744619890559" alt="Téléphone" style="width: 12px; margin-right: 4px;">
+                                    </td>
+                                    <td style="font-size: 10px; color: #000; vertical-align: middle;" id="telephone">00.00.00.00.00</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- Site Web -->
+                    <tr>
+                        <td style="padding-top: 4px;">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td style="vertical-align: middle;">
+                                        <img src="https://cdn.glitch.global/5cdba2c7-3b9b-4262-84c2-103095427298/Code%2FLogo%2FIconInternetNoir.png?v=1744619893192" alt="Site Web" style="width: 12px; margin-right: 4px;">
+                                    </td>
+                                    <td style="font-size: 10px; color: #000; vertical-align: middle;">
+                                        <a href="https://www.apate.fr" style="color: black; text-decoration: none;">www.apate.fr</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- Adresse -->
+                    <tr>
+                        <td style="padding-top: 4px;">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td style="vertical-align: middle;">
+                                        <img src="https://cdn.glitch.global/5cdba2c7-3b9b-4262-84c2-103095427298/Code%2FLogo%2FIconEpingleNoir.png?v=1744619890292" alt="Adresse" style="width: 12px; margin-right: 4px;">
+                                    </td>
+                                    <td style="font-size: 10px; color: #000; vertical-align: middle;" id="adresse">
+                                        adresse-----------------------------------------------
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        const nom = prompt("Quel est votre nom ?");
+        const prenom = prompt("Quel est votre prénom ?");
+        const statut = prompt("Quel est votre statut (ex : Stagiaire, Directrice...) ?");
+        const adresse = prompt("Quelle est votre adresse professionnelle ?");
+        const telephone = prompt("Quel est votre numéro de téléphone ?");
+
+        document.getElementById("nomPrenom").textContent = `${nom.toUpperCase()} ${prenom}`;
+        document.getElementById("statut").textContent = statut;
+        document.getElementById("adresse").textContent = adresse;
+        document.getElementById("telephone").textContent = telephone;
+    </script>
+
+</body>
+
+</html>
